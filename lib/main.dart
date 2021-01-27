@@ -188,18 +188,21 @@ class _HomePageState extends State<HomePage> {
                               Navigator.of(context).push(MaterialPageRoute(
                                   builder: (context) => ProfilePage()));
                             },
-                            child: Padding(
-                              padding: const EdgeInsets.only(left: 20),
-                              child: Container(
-                                decoration: BoxDecoration(),
-                                child: CircleAvatar(
-                                  radius: 44,
-                                  backgroundColor: tealColor,
+                            child: Hero(
+                              tag: "assets/images/photo.jpeg",
+                              child: Padding(
+                                padding: const EdgeInsets.only(left: 20),
+                                child: Container(
+                                  decoration: BoxDecoration(),
                                   child: CircleAvatar(
-                                    minRadius: 30,
-                                    maxRadius: 40,
-                                    backgroundImage:
-                                        AssetImage("assets/images/photo.jpeg"),
+                                    radius: 44,
+                                    backgroundColor: tealColor,
+                                    child: CircleAvatar(
+                                      minRadius: 30,
+                                      maxRadius: 40,
+                                      backgroundImage:
+                                          AssetImage("assets/images/photo.jpeg"),
+                                    ),
                                   ),
                                 ),
                               ),

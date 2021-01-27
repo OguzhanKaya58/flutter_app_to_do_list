@@ -13,9 +13,12 @@ class MyInfo extends StatelessWidget {
           RadialProgress(
             width: 4,
             goalCompleted: 0.75,
-            child: RoundedImage(
-              imagePath: "assets/images/photo.jpeg",
-              size: Size.fromWidth(110.0),
+            child: Hero(
+              tag: "assets/images/photo.jpeg",
+              child: RoundedImage(
+                imagePath: "assets/images/photo.jpeg",
+                size: Size.fromWidth(110.0),
+              ),
             ),
           ),
           SizedBox(
